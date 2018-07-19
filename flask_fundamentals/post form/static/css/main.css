@@ -1,0 +1,13 @@
+* {
+    align-content: center;
+    margin:50px;
+    background-color:rgb(164, 196, 132);
+}
+
+#formBox{
+    border: 2pt black solid;
+    margin:100px;
+    width:250px;
+    padding:20px;
+    display:inline-block; 
+}
