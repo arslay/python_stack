@@ -1,0 +1,14 @@
+* {
+    margin:1px;
+    background-color: aliceblue;
+}
+
+#addTwoButton{
+    width:40px;
+    height:40px;
+    padding:30px;
+}
+    
+#bigWords {
+    font-size: 48pt;
+}

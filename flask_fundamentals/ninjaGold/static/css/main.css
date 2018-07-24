@@ -1,0 +1,23 @@
+* {
+    margin-left:15px;
+}
+
+.getGoldBox {
+    border:1pt solid black;
+    width:100px;
+    height:200px;
+    float:left;
+}
+
+#buildings {
+    padding:5px;
+    width:120px;
+}
+
+.clickToGo {
+    vertical-align: bottom;
+}
+
+form{
+    display:inline-block;
+}

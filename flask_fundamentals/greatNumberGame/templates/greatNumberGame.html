@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style>
+        *{ padding:20px;}
+        .red{ background-color:red;}
+        .green{ background-color:green;}
+        .Box{ width:150px; height:200px;}
+    </style>
+</head>
+<body>
+    <center><h1>Session Data: {{ session['correct']}}, {{session['result']}} </h1></center>
+    <center><h2>Take a guess 0-100</h2></center>
+    {% if result =='TOO HIGH' %}
+    <center><div class='red Box'> TOO HIGH </div></center>
+    {% elif result =='TOO LOW' %}
+    <center><div class='red Box'> TOO LOW </div></center>
+    {% elif result =='CORRECT' %}
+    <center><div class='green Box'> CORRECT! </div></center>
+    {% endif %}
+    <center><form action='/guessnumber', method='POST'>
+        <input type='text', name='guess'></input>
+        <button type='submit',> SUBMIT </button>
+    </form></center>
+    <center><form action='/reset', method='GET'>
+        <button type='submit',> RESET </button>
+    </form></center>
+</body>
+</html>

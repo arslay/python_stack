@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/main.css') }}" />
+</head>
+<body>
+    <h1>Your Gold: {{ session['gold'] }} </h1>
+    <div id="buildings">
+        <form action="/processMoney" class='getGoldBox' method="post">
+            <input type="hidden" name="building" value="farm" />
+            <input type="submit" class='clickToGo' value="Find Gold!"/>
+        </form>
+        <form action="/processMoney" class='getGoldBox' method="post">
+            <input type="hidden" name="building" value="cave" />
+            <input type="submit" value="Find Gold!"/>
+        </form>
+        <form action="/processMoney" class='getGoldBox' method="post">
+            <input type="hidden" name="building" value="house" />
+            <input type="submit"  value="Find Gold!"/>
+        </form>
+        <form action="/processMoney" class='getGoldBox' method="post">
+            <input type="hidden" name="building" value="casino" />
+            <input type="submit"  value="Find Gold!"/>
+        </form>
+    </div>
+    <div>
+        <h2>Activities:</h2>
+    </div>
+</body>
+</html>
